@@ -32,6 +32,9 @@ const AppointmentToken = new mongoose.Schema({
         type: String,
         default: "Notes",
     },
+    AppointmentTime: {
+        type: String,
+    },
     appointmentDate: {
         type: Date,
         default: Date.now
