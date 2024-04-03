@@ -102,7 +102,7 @@ const userSignUpMobile =async(req,res)=>{
     const ispatient = await userpatient.findOne({ email });
   try {
     if(ispatient){
-        const matched =  bcrypt.compare(password, ispatient.password);
+        const matched = await bcrypt.compare(password, ispatient.password);
         if (!matched) {
             return res.send(error(403, "Incorrect password"))
         }
