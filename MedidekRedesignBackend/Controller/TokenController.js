@@ -79,6 +79,7 @@ const bookappointmentbytoken = async (req, res) => {
         phone,
         AppointmentNotes,
         appointmentDate,
+        AppointmentTime,
         role
     } = req.body;
     const today = new Date(appointmentDate);
@@ -95,6 +96,7 @@ const bookappointmentbytoken = async (req, res) => {
             gender,
             phone,
             AppointmentNotes,
+            AppointmentTime,
             appointmentDate: today,
             tokenid: Math.random().toString(36).substring(7),
             tokenNo: nextTokenNo,
@@ -124,6 +126,7 @@ const bookappointmentbytoken = async (req, res) => {
         gender,
         phone,
         AppointmentNotes,
+        AppointmentTime,
         appointmentDate: today,
         tokenid: Math.random().toString(36).substring(7),
         tokenNo: nextTokenNo,
